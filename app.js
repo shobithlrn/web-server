@@ -2,6 +2,7 @@ var express=require('express');
 var app=express();
 var middleware=require('./middleware')
 
+
 app.use(middleware.requireAuthentication);
 
 app.get('/about',middleware.logger, function(req,res)
