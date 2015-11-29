@@ -1,6 +1,7 @@
 var express=require('express');
 var app=express();
-var middleware=require('./middleware')
+var middleware=require('./middleware');
+var PORT=process.env.PORT||3000;
 
 
 app.use(middleware.requireAuthentication);
@@ -13,7 +14,7 @@ app.get('/about',middleware.logger, function(req,res)
 app.use(express.static(__dirname+'/public'));
 console.log(__dirname);
 
-app.listen(3000,function()
+app.listen(PORT,function()
 {
-	console.log('listening to port 3000')
+	console.log('listening to port>>>>'+PORT)
 });
