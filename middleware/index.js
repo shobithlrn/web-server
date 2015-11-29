@@ -1,0 +1,12 @@
+module.exports={
+	requireAuthentication:function(req,res,next)
+ 	{
+ 		console.log('requireAuthentication'+req.originalUrl);
+ 		next();
+ 	},
+ 	logger:function(req,res,next)
+ 	{
+ 		console.log('LOGGER');
+ 		next();
+ 	}
+}
