@@ -7,7 +7,7 @@ if (env === 'development') {
 		storage: __dirname + 'db.sqlite'
 	});
 } else {
-	sequelize = new Sequelize(process.env.DATABASE_url, {
+	sequelize = new Sequelize(process.env.DATABASE_URL, {
 		dialect: 'postgres'
 	});
 }
